@@ -1,11 +1,10 @@
-# Cimetier.me
+# Cimetier.org
 ## TODOs
 - 独自ドメインへ移行
-  - [Cimetier.me](https://cimetier.me): Cimetier - L'Atrie d'Itsuki Kigoshi
+  - [Cimetier.org](https://Cimetier.org): Cimetier - L'Atrie d'Itsuki Kigoshi
     - "Itsuki Kigoshi"と"木越斎"で一番上に出てくるように．
-    - https://domains.cloudflare.com/?domain=cimetier.me $16.56 Renews at $16.56
-  - [Cimetier.org](https://cimetier.org): 美術館
     - https://domains.cloudflare.com/?domain=Cimetier.org $7.50 Renews at $10.13
+  - [Cimetier.art](https://cimetier.art): 美術館
 - 色々をつなげる
   - [Zotero](https://www.zotero.org/groups/6515187/cimetier/library)
   - Markdown: [Quartz](https://quartz.jzhao.xyz/build)
@@ -19,12 +18,11 @@
     - [Flickr](https://www.flickr.com/people/202138941@N05/)
       - iPhoneの写真
       - OM-Dの写真
-    - 
   - Link
     - GitLab
     - メールへリンクするよりも手軽で良い連絡方法？
   - Workes
-    - やったことを綺麗に並べる
+    - やったことを綺麗に並べるAstro
     - timetable.icu
       -  catalogue.icu
     - Quaint Frontend
