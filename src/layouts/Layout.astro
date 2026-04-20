@@ -1,22 +1,12 @@
 ---
 import '../styles/global.css'
 
-const {pathname, host} = Astro.url;
+const {pathname} = Astro.url;
 const currentPath = decodeURIComponent(pathname).replace(/\/$/, "") || "/";
 const isHome = currentPath === "/";
 
-const paths = isHome ? [] : currentPath.split('/').filter(Boolean);
-const breadcrumbs = paths.map((path, index) => {
-    const href = '/' + paths.slice(0, index + 1).join('/');
-    return {
-        label: path,
-        href,
-        isCurrent: href === currentPath
-    };
-});
-
 const {
-    title = "Itsuki Kigoshi / 木越 斎 (きごし いつき)",
+    title = "Cimetier - L'Atrie d'Itsuki Kigoshi",
     description = "木越 斎（きごし いつき、2004年9月25日-）は, 国際基督教大学で数学/地球科学を専攻する大学生です.",
     image
 } = Astro.props;
@@ -33,31 +23,22 @@ const {
 </head>
 <body class="min-h-dvh flex flex-col w-full justify-between">
 <header class="w-full">
-    {!isHome && (
-            <nav aria-label="Breadcrumb" class="flex justify-center mt-4">
-                <ol class="flex items-baseline justify-center gap-1 text-sm">
-                    <li><a href="/" class="underline opacity-60">{host}</a></li>
-                    {breadcrumbs.map((crumb) => (
-                            <li class="flex items-baseline gap-1">
-                                <span class="opacity-40">/</span>
-                                {!crumb.isCurrent && (
-                                        <a href={crumb.href} class="underline opacity-60">{crumb.label}</a>)}
-                            </li>
-                    ))}
-                </ol>
-            </nav>
-    )}
-    {!isHome && (<h1 class="text-3xl text-center font-bold pt-5 pb-4">{title}</h1>)}
+    {!isHome && <h1 class="text-3xl text-center font-bold pt-5 pb-4">{title}</h1>}
 </header>
 <slot/>
 <footer class="w-full pb-6 flex flex-col items-center">
-    {isHome && (
+    {isHome ? (
             <div class="flex items-baseline justify-center gap-3 text-sm opacity-60">
                 <a href="/legal" class="underline">特定商取引法</a>
                 <span class="opacity-40">/</span>
-                <a href="/itsukikigoshi.asc" class="underline">PGP Key</a>
+                <a href="/itsukikigoshi.asc" class="underline">PGP Key</a> (Fingerprint: 5FEF A11E 52F0 AF96 960E  46B8 F555 5D33 934B 62B8)
             </div>
-    )}
+    ) : (
+    <div class="flex items-baseline justify-center gap-3 text-sm opacity-60">
+        <a href="/" class="underline">Home</a>
+    </div>
+    )
+    }
 </footer>
 </body>
 </html>
