@@ -1,10 +1,9 @@
 # Cimetier.org
 ## TODOs
-- 独自ドメインへ移行
+- [x] 独自ドメインへ移行
   - [Cimetier.org](https://Cimetier.org): Cimetier - L'Atrie d'Itsuki Kigoshi
     - "Itsuki Kigoshi"と"木越斎"で一番上に出てくるように．
     - https://domains.cloudflare.com/?domain=Cimetier.org $7.50 Renews at $10.13
-  - [Cimetier.com](https://cimetier.com): 美術館
 - 色々をつなげる
   - [Zotero](https://www.zotero.org/groups/6515187/cimetier/library)
   - Markdown: [Quartz](https://quartz.jzhao.xyz/build)
