@@ -4,11 +4,12 @@
   - [Cimetier.org](https://Cimetier.org): Cimetier - L'Atrie d'Itsuki Kigoshi
     - "Itsuki Kigoshi"と"木越斎"で一番上に出てくるように．
     - https://domains.cloudflare.com/?domain=Cimetier.org $7.50 Renews at $10.13
-  - [Cimetier.art](https://cimetier.art): 美術館
+  - [Cimetier.com](https://cimetier.com): 美術館
 - 色々をつなげる
   - [Zotero](https://www.zotero.org/groups/6515187/cimetier/library)
   - Markdown: [Quartz](https://quartz.jzhao.xyz/build)
     - ZennのDraftもこっちへ?
+    - notes.cimetier.org
   - 地図: OSM
   - 記録
     - [Booklog](https://booklog.jp/users/itsukikigoshi)
@@ -18,10 +19,10 @@
     - [Flickr](https://www.flickr.com/people/202138941@N05/)
       - iPhoneの写真
       - OM-Dの写真
-  - Link
+  - Links
     - GitLab
     - メールへリンクするよりも手軽で良い連絡方法？
-  - Workes
+  - Works
     - やったことを綺麗に並べるAstro
     - timetable.icu
       -  catalogue.icu
