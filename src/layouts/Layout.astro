@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { Icon } from "astro-icon/components";
 
 const { pathname } = Astro.url;
 const currentPath = decodeURIComponent(pathname).replace(/\/$/, "") || "/";
@@ -28,15 +29,27 @@ const {
 <slot/>
 <footer class="w-full pb-6 flex flex-col items-center">
     {isHome ? (
-            <div class="flex items-baseline justify-center gap-3 text-sm opacity-60">
-                <a href="/legal" class="underline">特定商取引法</a>
-                <span class="opacity-40">/</span>
-                <a href="/itsukikigoshi.asc" class="underline">PGP Key</a> (Fingerprint: 5FEF A11E 52F0 AF96 960E  46B8 F555 5D33 934B 62B8)
-            </div>
+    <nav class="flex flex-col items-center gap-2 text-[12px] opacity-60">
+        <div class="flex items-center gap-3">
+            <a href="/legal" class="underline">特定商取引法</a>
+            <span class="opacity-40">/</span>
+            <a href="/itsukikigoshi.asc" class="inline-flex items-end gap-1 underline font-medium group">
+                GPG Key
+                <Icon name="mdi:tray-arrow-down" class="w-4 h-4" />
+            </a>
+        </div>
+        <div class="flex items-center gap-1.5 px-2 py-1 rounded">
+            <Icon name="mdi:fingerprint" class="w-3 h-3" />
+            <code class="font-mono text-[10px] select-all">
+                5FEF A11E 52F0 AF96 960E 46B8 F555 5D33 934B 62B8
+            </code>
+        </div>
+    </nav>
     ) : (
-    <div class="flex items-baseline justify-center gap-3 text-sm opacity-60">
-        <a href="/" class="underline">Home</a>
-    </div>
+    <a href="/" class="inline-flex items-center gap-1 opacity-60 underline font-medium group">
+        <Icon name="mdi:home" class="w-4 h-4" />
+        Home
+    </a>
     )
     }
 </footer>

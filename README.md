@@ -8,7 +8,7 @@
 - 色々をつなげる
   - [Zotero](https://www.zotero.org/groups/6515187/cimetier/library)
   - Markdown: [Quartz](https://quartz.jzhao.xyz/build)
-    - ZennのDraftもこっちへ
+    - ZennのDraftもこっちへ?
   - 地図: OSM
   - 記録
     - [Booklog](https://booklog.jp/users/itsukikigoshi)
