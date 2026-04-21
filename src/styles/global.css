@@ -1,7 +1,5 @@
 @import "tailwindcss";
-
 @plugin "@tailwindcss/typography";
-
 @theme {
     --variant-dark: (prefers-color-scheme: dark);
 }
