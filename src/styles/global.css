@@ -7,15 +7,15 @@
 }
 
 @layer base {
-    body {
-        background-color: white;
-        color: black;
-    }
+	body {
+		background-color: white;
+		color: black;
+	}
 
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: black;
-            color: white;
-        }
-    }
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: black;
+			color: white;
+		}
+	}
 }

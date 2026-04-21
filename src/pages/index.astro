@@ -1,46 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SocialLink from '../components/SocialLink.astro';
-import {Image} from 'astro:assets';
-
-import imgReference from '../assets/profile.jpg';
+import { Image } from "astro:assets";
+import imgReference from "../assets/profile.jpg";
+import SocialLink from "../components/SocialLink.astro";
+import Layout from "../layouts/Layout.astro";
 
 const socialLinks = [
-    {
-        label: "Email",
-        icon: "mdi:email",
-        href: "mailto:itsuki@cimetier.org",
-    },
-    {
-        label: "GitLab",
-        icon: "mdi:gitlab",
-        href: "https://www.gitlab.com/itsukikigoshi",
-    },
-    {
-        label: "Booklog",
-        icon: "mdi:book-open-page-variant",
-        href: "https://booklog.jp/users/itsukikigoshi",
-    },
-    {
-        label: "IMDb",
-        icon: "mdi:theaters",
-        href: "https://www.imdb.com/user/ur163313033/",
-    },
-    // {
-    //     label: "RateYourMusic",
-    //     icon: "mdi:music-box-multiple",
-    //     href: "https://rateyourmusic.com/~itsukikigoshi",
-    // },
-    // {
-    //     label: "Flickr",
-    //     icon: "mdi:camera",
-    //     href: "https://www.flickr.com/people/202138941@N05/",
-    // },
-    {
-        label: "YAMAP",
-        icon: "mdi:landscape",
-        href: "https://yamap.com/users/3971974",
-    },
+	{
+		label: "Email",
+		icon: "mdi:email",
+		href: "mailto:itsuki@cimetier.org",
+	},
+	{
+		label: "GitLab",
+		icon: "mdi:gitlab",
+		href: "https://www.gitlab.com/itsukikigoshi",
+	},
+	{
+		label: "Booklog",
+		icon: "mdi:book-open-page-variant",
+		href: "https://booklog.jp/users/itsukikigoshi",
+	},
+	{
+		label: "IMDb",
+		icon: "mdi:theaters",
+		href: "https://www.imdb.com/user/ur163313033/",
+	},
+	// {
+	//     label: "RateYourMusic",
+	//     icon: "mdi:music-box-multiple",
+	//     href: "https://rateyourmusic.com/~itsukikigoshi",
+	// },
+	// {
+	//     label: "Flickr",
+	//     icon: "mdi:camera",
+	//     href: "https://www.flickr.com/people/202138941@N05/",
+	// },
+	{
+		label: "YAMAP",
+		icon: "mdi:landscape",
+		href: "https://yamap.com/users/3971974",
+	},
 ];
 ---
 <Layout title="Cimetier - L'Atrie d'Itsuki Kigoshi">

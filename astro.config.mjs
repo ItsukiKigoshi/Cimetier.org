@@ -1,16 +1,13 @@
 // @ts-check
-import {defineConfig} from 'astro/config';
-import icon from 'astro-icon';
-
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [
-        icon(),
-    ],
-    site: 'https://itsukikigoshi.github.io',
-    vite: {
-        plugins: [tailwindcss()],
-    },
+	integrations: [icon(), tailwind()],
+	site: "https://itsukikigoshi.gitlab.io",
+	base: "/cimetier.org",
+	outDir: "public",
+	publicDir: "static",
 });

@@ -1,0 +1,26 @@
+# The Docker image
+image: oven/bun:latest
+
+pages:  
+  cache:
+      paths:
+        - node_modules/
+        - .bun-cache/
+
+  before_script:
+    - bun install --frozen-lockfile
+
+  script:
+    # Specify the steps involved to build your app here
+    - bun run build
+
+  artifacts:
+    paths:
+      # The folder that contains the built files to be published.
+      # This must be called "public".
+      - public
+
+  only:
+    # Trigger a new build and deploy only when there is a push to the
+    # branch(es) below
+    - main
