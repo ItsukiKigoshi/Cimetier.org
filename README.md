@@ -1,26 +1,13 @@
 # [Cimetier.org](https://cimetier.org/)
-## TODOs
-- [x] 独自ドメインへ移行
-  - [Cimetier.org](https://Cimetier.org): Cimetier - L'Atrie d'Itsuki Kigoshi
-    - "Itsuki Kigoshi"と"木越斎"で一番上に出てくるように．
-    - https://domains.cloudflare.com/?domain=Cimetier.org $7.50 Renews at $10.13
+Cimetier - L'Atrie d'Itsuki Kigoshi
+
 - 色々をつなげる
   - [Zotero](https://www.zotero.org/groups/6515187/cimetier/library)
-  - Markdown: [Quartz](https://quartz.jzhao.xyz/build)
-    - ZennのDraftもこっちへ?
-    - notes.cimetier.org
+  - Markdown
   - 地図: OSM
-  - 記録
-    - [Booklog](https://booklog.jp/users/itsukikigoshi)
-    - [RateYourMusic](https://rateyourmusic.com/~itsukikigoshi)
-    - [IMDb](https://www.imdb.com/user/ur163313033/)
-    - [YAMAP](https://yamap.com/users/3971974)
-    - [Flickr](https://www.flickr.com/people/202138941@N05/)
-      - iPhoneの写真
-      - OM-Dの写真
-  - Links
-    - GitLab
-    - メールへリンクするよりも手軽で良い連絡方法？
+  - [Flickr](https://www.flickr.com/people/202138941@N05/)
+    - iPhoneの写真
+    - OM-Dの写真
   - Works
     - やったことを綺麗に並べるAstro
     - timetable.icu
@@ -36,4 +23,3 @@
   - GitLab Pages: fed up with GitHub
   - Astro
   - bun
-  - Quartz
