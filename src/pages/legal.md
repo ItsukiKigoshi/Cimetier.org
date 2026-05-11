@@ -13,7 +13,7 @@ Itsuki KIGOSHI
 
 ## 電子メール
 
-itsuki[at]cimetier.org
+itsukikigoshi[at]gmail.com
 
 ## 引渡時期
 
