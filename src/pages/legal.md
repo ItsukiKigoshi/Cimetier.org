@@ -3,6 +3,8 @@ title: "特定商取引法に基づく表記"
 layout: "../layouts/MDLayout.astro"
 ---
 
+# 特定商取引法に基づく表記
+
 ## 販売業社 / 運営責任者
 
 Itsuki KIGOSHI

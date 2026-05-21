@@ -5,10 +5,10 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [icon()],
-	outDir: "public",
-	publicDir: "static",
-	vite: {
-		plugins: [tailwind()],
-	},
+  integrations: [icon()],
+  outDir: "public",
+  publicDir: "static",
+  vite: {
+    plugins: [tailwind()],
+  },
 });

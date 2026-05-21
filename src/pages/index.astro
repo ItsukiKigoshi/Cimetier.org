@@ -6,80 +6,80 @@ import SocialLink from "../components/SocialLink.astro";
 import Layout from "../layouts/Layout.astro";
 
 const socialLinks = [
-    {
-        label: "Flickr",
-        icon: "mdi:camera",
-        href: "https://www.flickr.com/photos/202138941@N05/",
-    },
-    {
-        label: "GitHub",
-        icon: "mdi:github",
-        href: "https://www.github.com/itsukikigoshi",
-    },
-    {
-        label: "Zenn",
-        icon: "zenn",
-        href: "https://zenn.dev/itsukikigoshi",
-    },
-    {
-        label: "Booklog",
-        icon: "mdi:book-open-page-variant",
-        href: "https://booklog.jp/users/itsukikigoshi",
-    },
-    {
-        label: "IMDb",
-        icon: "mdi:theaters",
-        href: "https://www.imdb.com/user/ur163313033/",
-    },
-    {
-        label: "RateYourMusic",
-        icon: "mdi:music-box-multiple",
-        href: "https://rateyourmusic.com/~itsukikigoshi",
-    },
-    {
-        label: "YAMAP",
-        icon: "mdi:landscape",
-        href: "https://yamap.com/users/3971974",
-    },
+  {
+    label: "Flickr",
+    icon: "mdi:camera",
+    href: "https://www.flickr.com/photos/202138941@N05/",
+  },
+  {
+    label: "GitHub",
+    icon: "mdi:github",
+    href: "https://www.github.com/itsukikigoshi",
+  },
+  {
+    label: "Zenn",
+    icon: "zenn",
+    href: "https://zenn.dev/itsukikigoshi",
+  },
+  {
+    label: "Booklog",
+    icon: "mdi:book-open-page-variant",
+    href: "https://booklog.jp/users/itsukikigoshi",
+  },
+  {
+    label: "IMDb",
+    icon: "mdi:theaters",
+    href: "https://www.imdb.com/user/ur163313033/",
+  },
+  {
+    label: "RateYourMusic",
+    icon: "mdi:music-box-multiple",
+    href: "https://rateyourmusic.com/~itsukikigoshi",
+  },
+  {
+    label: "YAMAP",
+    icon: "mdi:landscape",
+    href: "https://yamap.com/users/3971974",
+  },
 ];
 ---
 
 <Layout title="Cimetier - L'Atrie d'Itsuki Kigoshi">
-    <main class="flex flex-col items-center w-full">
-        <section class="rounded-full overflow-hidden">
-            <Image
-                src={imgReference}
-                alt="Itsuki Kigoshi"
-                class="object-cover w-48 h-48"
-                loading="eager"
-            />
-        </section>
-        <section class="my-4 flex flex-col items-center gap-1 text-center">
-            <h1 class="text-xl font-bold inline-flex items-center gap-2">
-                Itsuki Kigoshi / 木越 斎
-                <a
-                    href="mailto:itsukikigoshi@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Email"
-                    class="flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors"
-                >
-                    <Icon name="mdi:email" size="18" />
-                </a>
-            </h1>
-            <h2 class="text-sm opacity-60 my-3">ICU'27 (2004)</h2>
-            <h3 class="text-base">Earth Science, Contemporary Art, Climbing</h3>
-        </section>
-        <nav class="flex justify-center gap-1">
-            {
-                socialLinks.map((link) => (
-                    <SocialLink
-                        href={link.href}
-                        ariaLabel={link.label}
-                        iconName={link.icon}
-                    />
-                ))
-            }
-        </nav>
-    </main>
+  <main class="flex w-full flex-col items-center">
+    <section class="overflow-hidden rounded-full">
+      <Image
+        src={imgReference}
+        alt="Itsuki Kigoshi"
+        class="h-48 w-48 object-cover"
+        loading="eager"
+      />
+    </section>
+    <section class="my-4 flex flex-col items-center gap-1 text-center">
+      <h1 class="inline-flex items-center gap-2 text-xl font-bold">
+        Itsuki Kigoshi / 木越 斎
+        <a
+          href="mailto:itsukikigoshi@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Email"
+          class="flex items-center text-gray-400 transition-colors hover:text-gray-600 dark:hover:text-white"
+        >
+          <Icon name="mdi:email" size="18" />
+        </a>
+      </h1>
+      <h2 class="my-3 text-sm opacity-60">ICU'27 (2004)</h2>
+      <h3 class="text-base">Earth Science, Contemporary Art, Climbing</h3>
+    </section>
+    <nav class="flex justify-center gap-1">
+      {
+        socialLinks.map((link) => (
+          <SocialLink
+            href={link.href}
+            ariaLabel={link.label}
+            iconName={link.icon}
+          />
+        ))
+      }
+    </nav>
+  </main>
 </Layout>

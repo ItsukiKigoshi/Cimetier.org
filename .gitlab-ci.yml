@@ -1,11 +1,11 @@
 # The Docker image
 image: oven/bun:latest
 
-pages:  
+pages:
   cache:
-      paths:
-        - node_modules/
-        - .bun-cache/
+    paths:
+      - node_modules/
+      - .bun-cache/
 
   before_script:
     - bun install --frozen-lockfile
