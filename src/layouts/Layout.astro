@@ -8,7 +8,7 @@ const isHome = currentPath === "/";
 
 const {
   title = '木越 斎 / Itsuki "Cimetier" Kigoshi',
-  description = "木越 斎（きごし いつき、2004年9月25日-）は, 国際基督教大学で統計学を専攻する大学生です.",
+  description = '木越 斎（きごし いつき、2004年9月25日-）は, 国際基督教大学で統計学を専攻する大学生です. Itsuki "Cimetier" Kigoshi is a unversity student studying statistics at ICU.',
   image = "https://cimetier.org/images/og-image.png",
 } = Astro.props;
 ---
@@ -17,6 +17,7 @@ const {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{title}</title>
+    <meta name="description" content={description}/>
     <meta property="og:title" content={title}/>
     <meta property="og:description" content={description}/>
     <meta property="og:image" content={image}/>
