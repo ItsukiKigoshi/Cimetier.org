@@ -8,7 +8,7 @@ pages:
       - .bun-cache/
 
   before_script:
-    - bun install --frozen-lockfile --backend=copyfile
+    - bun install --frozen-lockfile
 
   script:
     # Specify the steps involved to build your app here
