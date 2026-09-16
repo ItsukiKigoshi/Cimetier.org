@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+
+const featured = [
+    {
+        title: "YCAMオープンラボ2023「もうひとつの学び場」登壇",
+        link: "https://www.ycam.jp/events/2023/openlab/",
+    },
+];
+---
+
+{
+    featured.length > 0 && (
+        <section>
+            <h2 class="border-base-content/20 mb-3 border-b pb-1 font-bold">
+                Featured
+            </h2>
+            <ul class="list-inside list-disc space-y-2">
+                {featured.map((item) => (
+                    <li>
+                        <span class="inline-flex items-center gap-1">
+                            {item.title}
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon name="mdi:open-in-new" class="h-4 w-4" />
+                            </a>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    )
+}

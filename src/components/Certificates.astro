@@ -1,0 +1,12 @@
+---
+const certificates = [
+  "普通自動車第一種運転免許（AT限定）",
+  "基本情報技術者",
+];
+---
+<section>
+<h2 class="font-bold border-b border-base-content/20 pb-1 mb-2">Certificates</h2>
+<ul class="list-disc list-inside space-y-1">
+    {certificates.map((cert) => <li>{cert}</li>)}
+</ul>
+</section>

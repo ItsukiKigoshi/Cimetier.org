@@ -1,0 +1,84 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { Image } from "astro:assets";
+import imgReference from "@/assets/profile.jpg";
+
+import SocialLink from "@/components/SocialLink.astro";
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    icon: "mdi:linkedin",
+    href: "https://www.linkedin.com/in/itsukikigoshi",
+  },
+  {
+    label: "GitHub",
+    icon: "mdi:github",
+    href: "https://www.github.com/itsukikigoshi",
+  },
+  {
+    label: "Flickr",
+    icon: "mdi:camera",
+    href: "https://www.flickr.com/photos/202138941@N05/",
+  },
+  {
+    label: "Zenn",
+    icon: "zenn",
+    href: "https://zenn.dev/itsukikigoshi",
+  },
+  {
+    label: "Booklog",
+    icon: "mdi:book-open-page-variant",
+    href: "https://booklog.jp/users/itsukikigoshi",
+  },
+  {
+    label: "IMDb",
+    icon: "mdi:theaters",
+    href: "https://www.imdb.com/user/ur163313033/",
+  },
+  {
+    label: "YAMAP",
+    icon: "mdi:landscape",
+    href: "https://yamap.com/users/3971974",
+  },
+];
+---
+<section class="flex flex-col items-center text-center">
+   <figure class="overflow-hidden rounded-full mb-4">
+     <Image
+       src={imgReference}
+       alt='Itsuki "Cimetier" Kigoshi'
+       class="h-48 w-48 object-cover"
+       loading="eager"
+     />
+   </figure>
+   <h1 class="inline-flex items-center gap-2 text-xl font-bold">
+     Itsuki <span class="-rotate-7 text-sm font-light italic opacity-80"
+       >"Cimetier"</span
+     > Kigoshi / 木越 斎
+     <a
+       href="mailto:itsukikigoshi@gmail.com"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Email"
+       class="flex items-center text-gray-400 transition-colors hover:text-gray-600 dark:hover:text-white"
+     >
+       <Icon name="mdi:email" size="18" />
+     </a>
+   </h1>
+   <h2 class="my-3 text-sm opacity-100">ICU'27 (2004)</h2>
+   <h3 class="text-base mb-4">Astronomy, Contemporary Art, Climbing</h3>
+   
+   <nav class="flex justify-center gap-1">
+     {
+       socialLinks.map((link) => (
+         <SocialLink
+           href={link.href}
+           ariaLabel={link.label}
+           iconName={link.icon}
+         />
+       ))
+     }
+   </nav>
+ </section>

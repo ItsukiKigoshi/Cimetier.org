@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon/components";
+
+const education = [
+  {
+    period: "2023-27",
+    title: "国際基督教大学 (ICU)",
+    detail: "2025-26：カリフォルニア大学バークレー校（交換留学）",
+  },
+  {
+    period: "2020-23",
+    title: "東京都立日比谷高等学校",
+  },
+];
+---
+
+<section>
+  <h2 class="font-bold border-b border-base-content/20 pb-1 mb-4">Education</h2>
+  <ul class="timeline timeline-vertical timeline-compact">
+    {education.map((item, index) => (
+      <li>
+        {index !== 0 && <hr />}
+        <span class="timeline-middle"><Icon name="mdi:circle-small" class="w-5 h-5" /></span>
+        <article class="timeline-end mb-4">
+          <time class="font-mono text-sm block">{item.period}</time>
+          <h3 class="font-bold">{item.title}</h3>
+          {item.detail && <p class="text-sm">{item.detail}</p>}
+        </article>
+        {index !== education.length - 1 && <hr />}
+      </li>
+    ))}
+  </ul>
+</section>

@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon/components";
+
+const experiences = [
+  {
+    period: "2026年6月 - 2026年10月",
+    title: "山小屋季節従業員",
+    location: "ヒュッテ大槍（長野）",
+    link: "https://www.enzanso.co.jp/hutte-ooyari",
+  },
+  {
+    period: "2024年7月 - 2026年6月",
+    title: "Minecraftプログラミング講師",
+    location: "TechTeacher（オンライン）",
+    link: "https://tech-teacher.jp/",
+  },
+  {
+    period: "2024年7月 - 2025年8月",
+    title: "フロント・レセプション",
+    location: "Wild Cherry Blossom Hostel（東京）",
+    link: "https://wildcherryblossomhostel.com/",
+  },
+  {
+    period: "2024年5月 - 2025年8月",
+    title: "数学チューター",
+    location: "ICU Quantitative Skills Support（東京）",
+    link: "https://office.icu.ac.jp/ctl/qss/",
+  },
+  {
+    period: "2025年3月 - 2025年4月",
+    title: "UIデザイナー / フロントエンドエンジニア (1ヶ月トライアル)",
+    location: "株式会社mairu tech（東京）",
+    link: "https://mairu.co.jp/",
+  },
+  {
+    period: "2023年9月 - 2024年12月",
+    title: "塾講師",
+    location: "はけの道学習室（東京）",
+    link: "https://niyolyi.co.jp/hakegaku/",
+  },
+  {
+    period: "2023年3月 - 2023年12月",
+    title: "学生メンター",
+    location: "Inochi Gakusei Innovators Program（東京）",
+    link: "https://inochi-wakazo.org/projects/igip",
+  },
+  {
+    period: "2023年2月 - 2023年8月",
+    title: "学生メンバー",
+    location: "Earth Guardians Japan",
+    link: "https://earthguardiansjapa.wixsite.com/my-site",
+  },
+  {
+    period: "2023年7月",
+    title: "学生サポーター",
+    location: "第54回 国際物理オリンピック日本大会（東京）",
+    link: "https://international-physics-olympiad2023.com/",
+  },
+];
+---
+
+<section>
+  <h2 class="font-bold border-b border-base-content/20 pb-1 mb-4">Experiences</h2>
+  <ul class="timeline timeline-vertical timeline-compact">
+    {experiences.map((exp, index) => (
+      <li>
+        {index !== 0 && <hr />}
+        <span class="timeline-middle"><Icon name="mdi:circle-small" class="w-5 h-5" /></span>
+        <article class="timeline-end mb-4">
+          <time class="font-mono text-sm block">{exp.period}</time>
+          <h3 class="font-bold">{exp.title}</h3>
+          {exp.location && (
+            <p class="text-sm">
+              {exp.link ? (
+                  <span class="inline-flex items-center gap-0.5
+                  ">
+                    {exp.location}
+                    <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                        <Icon name="mdi:open-in-new" class="w-4 h-4" />
+                    </a>
+                  </span>
+              ) : (
+                exp.location
+              )}
+            </p>
+          )}
+        </article>
+        {index !== experiences.length - 1 && <hr />}
+      </li>
+    ))}
+  </ul>
+</section>

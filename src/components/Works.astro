@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+
+const works = [
+    {
+        title: "Timetable.icu (2026-現在)",
+        link: "https://timetable.icu/",
+        description:
+            "国際基督教大学（ICU）向けの時間割アプリ．公式シラバスの閲覧，Googleアカウントログインによる同期，特殊な時間割形式への対応，同一時間帯の複数コマ比較など，履修登録に役立つ独自の機能を搭載",
+        subLink: {
+            text: "旧バージョン: ICU Catalogue (2023-26)",
+            link: "https://itsukikigoshi.github.io/icu-catalogue/",
+        },
+    },
+    {
+        title: "Seiryofes.com (2023)",
+        link: "https://2023.seiryofes.com/",
+        description: "高校の文化祭整理券発券システムにおけるWeb UIデザイン",
+    },
+    {
+        title: "「アート・キャンプ for under 22 Vol. 7 ヒューマン・ビギン：アシタナニスル？」(2021)",
+        link: "https://precog-jp.net/online/human-begin/",
+        description: "森美術館主催プログラムでのダンス作品制作",
+    },
+    {
+        title: "Kigoshi Movie (2013-15)",
+        link: "https://www.youtube.com/playlist?list=PLVxEAWkQVBq7ZLbCohJz4OtNNkQ6UMr0c",
+        description:
+            "レゴブロックを用いたストップモーション・アニメーション作品制作",
+    },
+];
+---
+
+<section>
+    <h2 class="border-base-content/20 mb-4 border-b pb-1 font-bold">
+        Works / Projects
+    </h2>
+    <ul class="list-disc space-y-6 pl-5">
+        {
+            works.map((work) => (
+                <li class="space-y-1">
+                    <h3 class="inline-flex items-center gap-1 font-bold">
+                        {work.title}
+                        <a
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Icon
+                                name="mdi:open-in-new"
+                                class="h-4 w-4 shrink-0"
+                            />
+                        </a>
+                    </h3>
+                    <p class="text-sm leading-relaxed">{work.description}</p>
+                    {work.subLink && (
+                        <p class="border-base-content/20 inline-flex items-center gap-1 border-l pl-3 text-sm">
+                            {work.subLink.text}
+                            <a
+                                href={work.subLink.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon
+                                    name="mdi:open-in-new"
+                                    class="h-3.5 w-3.5 shrink-0"
+                                />
+                            </a>
+                        </p>
+                    )}
+                </li>
+            ))
+        }
+    </ul>
+</section>
