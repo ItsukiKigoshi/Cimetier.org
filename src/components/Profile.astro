@@ -8,14 +8,19 @@ import SocialLink from "@/components/SocialLink.astro";
 
 const socialLinks = [
   {
-    label: "LinkedIn",
-    icon: "mdi:linkedin",
-    href: "https://www.linkedin.com/in/itsukikigoshi",
+    label: "E-Mail",
+    icon: "mdi:email",
+    href: "mailto:itsukikigoshi@gmail.com",
   },
   {
     label: "GitHub",
     icon: "mdi:github",
     href: "https://www.github.com/itsukikigoshi",
+  },
+  {
+    label: "GitLab",
+    icon: "mdi:gitlab",
+    href: "https://gitlab.com/ItsukiKigoshi",
   },
   {
     label: "Flickr",
@@ -45,40 +50,31 @@ const socialLinks = [
 ];
 ---
 <section class="flex flex-col items-center text-center">
-   <figure class="overflow-hidden rounded-full mb-4">
-     <Image
-       src={imgReference}
-       alt='Itsuki "Cimetier" Kigoshi'
-       class="h-48 w-48 object-cover"
-       loading="eager"
-     />
-   </figure>
-   <h1 class="inline-flex items-center gap-2 text-xl font-bold">
-     Itsuki <span class="-rotate-7 text-sm font-light italic opacity-80"
-       >"Cimetier"</span
-     > Kigoshi / 木越 斎
-     <a
-       href="mailto:itsukikigoshi@gmail.com"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Email"
-       class="flex items-center text-gray-400 transition-colors hover:text-gray-600 dark:hover:text-white"
-     >
-       <Icon name="mdi:email" size="18" />
-     </a>
-   </h1>
-   <h2 class="my-3 text-sm opacity-100">ICU'27 (2004)</h2>
-   <h3 class="text-base mb-4">Astronomy, Contemporary Art, Climbing</h3>
-   
-   <nav class="flex justify-center gap-1">
-     {
-       socialLinks.map((link) => (
-         <SocialLink
-           href={link.href}
-           ariaLabel={link.label}
-           iconName={link.icon}
-         />
-       ))
-     }
-   </nav>
- </section>
+  <figure class="mb-4 overflow-hidden rounded-full">
+    <Image
+      src={imgReference}
+      alt='Itsuki "Cimetier" Kigoshi'
+      class="h-48 w-48 object-cover"
+      loading="eager"
+    />
+  </figure>
+  <h1 class="inline-flex items-center gap-2 text-xl font-bold">
+    Itsuki <span class="-rotate-7 text-sm font-light italic opacity-80"
+      >"Cimetier"</span
+    > Kigoshi / 木越 斎
+  </h1>
+  <h2 class="my-3 text-sm opacity-100">ICU'27 (2004)</h2>
+  <h3 class="mb-4 text-base">Astronomy, Contemporary Art, Climbing</h3>
+
+  <nav class="flex justify-center gap-0.2">
+    {
+      socialLinks.map((link) => (
+        <SocialLink
+          href={link.href}
+          ariaLabel={link.label}
+          iconName={link.icon}
+        />
+      ))
+    }
+  </nav>
+</section>
