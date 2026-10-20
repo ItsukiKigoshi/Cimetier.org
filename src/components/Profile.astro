@@ -49,6 +49,7 @@ const socialLinks = [
   },
 ];
 ---
+
 <section class="flex flex-col items-center text-center">
   <figure class="mb-4 overflow-hidden rounded-full">
     <Image
@@ -59,14 +60,16 @@ const socialLinks = [
     />
   </figure>
   <h1 class="inline-flex items-center gap-2 text-xl font-bold">
-    Itsuki <span class="-rotate-7 text-sm font-light italic opacity-80"
-      >"Cimetier"</span
+    Itsuki <a
+      href="https://lab.cimetier.org/"
+      class="-rotate-7 text-sm font-light italic opacity-80 duration-300 hover:rotate-0 hover:text-xl hover:font-bold"
+      >"<span class="underline">Cimetier</span>"</a
     > Kigoshi / 木越 斎
   </h1>
   <h2 class="my-3 text-sm opacity-100">ICU'27 (2004)</h2>
   <h3 class="mb-4 text-base">Astronomy, Contemporary Art, Climbing</h3>
 
-  <nav class="flex justify-center gap-0.2">
+  <nav class="gap-0.2 flex justify-center">
     {
       socialLinks.map((link) => (
         <SocialLink
